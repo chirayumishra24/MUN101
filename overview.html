@@ -1,0 +1,417 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="responsive.css">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#F8F5F0',
+                    mint: '#A7F3D0',
+                    powder: '#BFDBFE',
+                    coral: '#FFB4A2',
+                },
+                borderRadius: {
+                    'xl': '1.75rem',
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    pulseSoft: {
+                        '0%, 100%': { opacity: '0.6' },
+                        '50%': { opacity: '0.9' },
+                    }
+                },
+                animation: {
+                    float: 'float 6s ease-in-out infinite',
+                    pulseSoft: 'pulseSoft 4s ease-in-out infinite',
+                }
+            },
+        },
+    }
+</script>
+<style type="text/css">
+    @media (prefers-reduced-motion: reduce) {
+
+        .bg-gif,
+        * {
+            animation: none !important;
+        }
+    }
+
+    .content-card {
+        transition: all 0.4s ease;
+    }
+
+    .content-card:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 25px 50px rgba(255, 180, 162, 0.4);
+    }
+</style>
+<!-- Background -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
+        style="background-image: url('/s/articles/6964b5b0197e482518171202/images/FromKlickPinCFGarageManagement-2DAnimatedExplainerVideo-ParallaxMypromovideos_MotiondesignanimationAnimationexplainervideoMotiongraphicstrends-ezgif.com-video-to-gif-converter.gif');">
+        &nbsp;</div>
+
+    <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm">&nbsp;</div>
+</div>
+<!-- Progress Bar -->
+
+<div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
+    <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
+            id="progress-fill" style="height: 0%;">&nbsp;</div>
+    </div>
+</div>
+<!-- Buttons -->
+
+<p><button
+        class="fixed top-8 right-8 bg-powder/80 backdrop-blur-sm text-gray-900 p-5 rounded-full shadow-lg z-50 hover:bg-powder hover:scale-110 transition-all duration-300"
+        id="fullscreen-btn"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M3 9V3h6"></path>
+            <path d="M3 15v6h6"></path>
+            <path d="M21 9V3h-6"></path>
+            <path d="M21 15v6h-6"></path>
+        </svg></button><button
+        class="fixed bottom-8 right-8 bg-coral/80 backdrop-blur-sm text-white p-5 rounded-full shadow-lg z-50 hover:bg-coral hover:scale-110 transition-all duration-300 hidden"
+        id="back-to-top"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg></button><!-- Hero Header --></p>
+
+<header class="relative py-32 px-8 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg">&nbsp;</div>
+
+    <div class="relative max-w-5xl mx-auto text-center animate-float">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">Welcome to Model United
+            Nations<br />
+            <span class="text-coral block mt-4" style="color: #FF6B6B;">Learning Program</span>
+        </h1>
+
+        <p class="text-2xl mt-8 max-w-4xl mx-auto leading-relaxed">A transformative journey into global diplomacy,
+            leadership, and real-world problem solving.</p>
+    </div>
+</header>
+<!-- Notes Button (Bottom Left) -->
+
+<p><button
+        class="fixed bottom-6 left-8 z-50 w-16 h-16 rounded-full bg-amber-400 border-4 border-white shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 backdrop-blur-md"
+        id="notes-btn"><img alt="Notes" class="w-8 h-8"
+            src="/s/articles/6971c474348e12598d489e16/images/notes.png" /></button><!-- Notes Panel --></p>
+
+<div class="fixed bottom-28 left-8 z-50 w-80 max-w-[90vw] bg-white/80 backdrop-blur-xl border border-mint/50 rounded-2xl shadow-2xl p-4 hidden"
+    id="notes-panel">
+    <h3 class="text-lg font-bold text-coral mb-3 text-center">My Notes</h3>
+    <textarea
+        class="w-full rounded-xl p-3 text-sm border border-powder/60 focus:outline-none focus:ring-2 focus:ring-coral/40 bg-white/90 resize-none"
+        id="notes-text" placeholder="Write your notes here..." rows="6"></textarea>
+
+    <div class="flex justify-between items-center mt-4 gap-2"><button
+            class="flex-1 bg-red-100 text-red-600 text-sm font-semibold py-2 rounded-xl hover:bg-red-200 transition"
+            id="clear-notes">Clear</button><button
+            class="flex-1 bg-mint/40 text-gray-800 text-sm font-semibold py-2 rounded-xl hover:bg-mint/60 transition"
+            id="download-notes">Download</button></div>
+</div>
+<script>
+    const notesBtn = document.getElementById("notes-btn");
+    const notesPanel = document.getElementById("notes-panel");
+    const notesText = document.getElementById("notes-text");
+    const clearBtn = document.getElementById("clear-notes");
+    const downloadBtn = document.getElementById("download-notes");
+
+    // Load saved notes
+    notesText.value = localStorage.getItem("mun_notes") || "";
+
+    // Toggle panel
+    notesBtn.addEventListener("click", () => {
+        notesPanel.classList.toggle("hidden");
+    });
+
+    // Save notes automatically
+    notesText.addEventListener("input", () => {
+        localStorage.setItem("mun_notes", notesText.value);
+    });
+
+    // Clear notes
+    clearBtn.addEventListener("click", () => {
+        if (confirm("Clear all notes?")) {
+            notesText.value = "";
+            localStorage.removeItem("mun_notes");
+        }
+    });
+
+    // Download notes
+    downloadBtn.addEventListener("click", () => {
+        const blob = new Blob([notesText.value], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "MUN_Notes.txt";
+        link.click();
+        URL.revokeObjectURL(link.href);
+    });
+</script><!-- Welcome Note -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-12 shadow-xl content-card text-center">
+        <p class="text-xl leading-relaxed" style="font-size: 20px;">As you step into this experience, you will take on
+            the role of a diplomat, represent countries, debate pressing global challenges, and collaborate to create
+            meaningful solutions. This program is designed not just to teach you about the world, but to help you
+            understand how the world works. Through discussion, research, and teamwork, you will build confidence,
+            sharpen your voice, and learn to think beyond borders.<br />
+            <br />
+            Get ready to step out of your comfort zone, engage with global issues, and begin your journey as a future
+            leader and changemaker.
+        </p>
+    </div>
+</section>
+<!-- Skills Section with Images -->
+
+<section class="max-w-6xl mx-auto px-8 py-15">
+    <h2 class="text-4xl font-bold text-coral text-center mb-12">What Skills Will Students Learn?</h2>
+
+    <p class="text-xl text-center mb-16">By the end of this MUN program, students will develop a powerful set of
+        academic, professional, and life skills:</p>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 pb-0 mb-0"><!-- Public Speaking -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Public Speaking &amp; Confidence</h3>
+        </div>
+        <!-- Research -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Research &amp; Analytical Thinking</h3>
+        </div>
+        <!-- Diplomacy -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Diplomacy &amp; Negotiation</h3>
+        </div>
+        <!-- Critical Thinking -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Critical Thinking &amp; Problem Solving</h3>
+        </div>
+        <!-- Leadership -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Leadership &amp; Teamwork</h3>
+        </div>
+        <!-- Global Awareness -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl p-8 shadow-xl content-card text-center">
+            <h3 class="text-2xl font-bold text-coral mb-4">Global Awareness &amp; Cultural Sensitivity</h3>
+        </div>
+        <!-- Professional Etiquette – last card with minimal bottom spacing -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-8 shadow-xl content-card text-center md:col-span-2 lg:col-span-1 mb-0 pb-0">
+            <h3 class="text-2xl font-bold text-coral mb-4">Professional Etiquette &amp; Communication</h3>
+        </div>
+    </div>
+</section>
+<!-- Modules Overview -->
+
+<section class="max-w-5xl mx-auto px-8 py-20 space-y-20"><!-- Module 1 -->
+    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-12 shadow-xl content-card">
+        <h2 class="text-3xl font-bold text-coral text-center mb-8">Module 1: What is the Model United Nations?</h2>
+
+        <p class="text-lg text-center mb-8">Objective: Understand the purpose, structure, and appeal of Model UN.</p>
+
+        <ul class="space-y-8 text-lg max-w-4xl mx-auto">
+            <li><strong>What is MUN?</strong> MUN is a simulation where students act as delegates from different
+                countries, discussing real-world issues and proposing solutions from their assigned country&rsquo;s
+                perspective.</li>
+            <li><strong>Why participate?</strong>
+                <ul class="ml-8 mt-2 space-y-2 list-disc">
+                    <li>Develops skills: public speaking, diplomacy, research, negotiation, and critical thinking.</li>
+                    <li>Opportunity to learn about world issues, meet new people, and grow as a leader.</li>
+                </ul>
+            </li>
+            <li><strong>How do MUN conferences work?</strong> Conferences are hosted by schools, organizations, and
+                universities at various levels&mdash;from middle school to university.</li>
+        </ul>
+    </div>
+    <!-- Module 2 -->
+
+    <div class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl p-12 shadow-xl content-card">
+        <h2 class="text-3xl font-bold text-coral text-center mb-8">Module 2: How Does an MUN Conference Work?</h2>
+
+        <p class="text-lg text-center mb-8">Objective: Familiarize yourself with the conference structure, the flow of
+            debate, and committee roles.</p>
+
+        <ul class="space-y-8 text-lg max-w-4xl mx-auto">
+            <li><strong>Conference Registration:</strong> Teams register, receive countries and committees to represent.
+            </li>
+            <li><strong>Preparation:</strong>
+                <ul class="ml-8 mt-2 space-y-2 list-disc">
+                    <li>Learn about your assigned country: geography, politics, current events.</li>
+                    <li>Understand the topics and your committee&rsquo;s focus.</li>
+                </ul>
+            </li>
+            <li><strong>Flow of Debate:</strong> Opening speeches, formal debate (speaker&rsquo;s list), caucuses
+                (formal/informal discussions), resolution writing, and voting.</li>
+            <li><strong>Committee Roles:</strong> Delegates, Chairs (moderators), Rapporteurs (record keepers),
+                Observers.</li>
+        </ul>
+    </div>
+    <!-- Module 3 -->
+
+    <div class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl p-12 shadow-xl content-card">
+        <h2 class="text-3xl font-bold text-coral text-center mb-8">Module 3: Research, Rules, and Resolution Writing
+        </h2>
+
+        <p class="text-lg text-center mb-8">Objective: Learn how to research, follow parliamentary procedure, and draft
+            effective resolutions.</p>
+
+        <ul class="space-y-8 text-lg max-w-4xl mx-auto">
+            <li><strong>Country Research:</strong> Gather facts about your assigned country: demographics, economy,
+                politics, and key alliances.</li>
+            <li><strong>Topic Research:</strong> Study the issue at hand, your country&rsquo;s stance, relevant UN
+                documents, and treaties.</li>
+            <li><strong>Rules of Procedure (RoP):</strong> Points (e.g., Point of Order) and Motions (e.g., move to
+                debate, amend a resolution) help structure the debate.</li>
+            <li><strong>Draft Resolutions:</strong> Collaborate with other delegates to combine ideas into a written
+                solution to the issue. Resolutions must be clear, persuasive, and in proper format.</li>
+        </ul>
+
+        <p class="text-lg text-center mt-12 font-semibold italic">ACTIVITY:<br />
+            Pick a country and global issue (real or imaginary). Write three facts about your country and one possible
+            solution for your issue.</p>
+    </div>
+    <!-- Module 4 -->
+
+    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-12 shadow-xl content-card">
+        <h2 class="text-3xl font-bold text-coral text-center mb-8">Module 4: Debate, Diplomacy, and Success at MUN</h2>
+
+        <p class="text-lg text-center mb-8">Objective: Practice public speaking, negotiation, and the art of compromise
+            for MUN success.</p>
+
+        <ul class="space-y-8 text-lg max-w-4xl mx-auto">
+            <li><strong>Speaking Skills:</strong> Prepare clear, concise, and persuasive speeches; support your position
+                with evidence and logic.</li>
+            <li><strong>Negotiation:</strong> Seek alliances, listen actively, and find common ground with other
+                delegates.</li>
+            <li><strong>Consensus Building &amp; Voting:</strong> Work towards agreements, be ready to negotiate wording
+                for broad support. Most resolutions pass by majority but consensus is ideal.</li>
+            <li><strong>Conference Etiquette:</strong> Be respectful, professional, and diplomatic at all times.</li>
+        </ul>
+    </div>
+</section>
+<!-- Certificate Prerequisites Card -->
+
+<div
+    class="bg-white/80 backdrop-blur-lg border border-mint/50 rounded-3xl p-10 md:p-14 shadow-2xl content-card mx-auto max-w-4xl mt-12">
+    <div class="text-center mb-10">
+        <div
+            class="inline-block bg-gradient-to-r from-coral to-mint text-white text-3xl font-bold px-10 py-4 rounded-full shadow-lg mb-6">
+            Certificate of Completion</div>
+
+        <h2 class="text-4xl font-bold text-coral mb-4">Congratulations &ndash; You&#39;re Almost There!</h2>
+
+        <p class="text-xl text-gray-700 max-w-3xl mx-auto">To earn your official Model United Nations Certificate,
+            complete the following requirements:</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10"><!-- Quiz Completion -->
+        <div
+            class="bg-gradient-to-br from-mint/20 to-powder/20 rounded-2xl p-8 border border-mint/40 text-center hover:shadow-xl transition-shadow">
+            <div class="text-5xl mb-4">📝</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-3">All Module Quizzes</h3>
+
+            <p class="text-lg text-gray-700">Achieve at least 70% in every chapter quiz<br />
+                <span class="text-sm text-gray-600">(retakes allowed)</span>
+            </p>
+        </div>
+        <!-- Assignments -->
+
+        <div
+            class="bg-gradient-to-br from-powder/20 to-coral/20 rounded-2xl p-8 border border-powder/40 text-center hover:shadow-xl transition-shadow">
+            <div class="text-5xl mb-4">📚</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-3">All Assignments &amp; Projects</h3>
+
+            <p class="text-lg text-gray-700">Submit Project A (Country Profile)<br />
+                Submit Project B (Video Presentation)<br />
+                Submit any other required tasks</p>
+        </div>
+        <!-- Capstone Project -->
+
+        <div
+            class="bg-gradient-to-br from-coral/20 to-mint/20 rounded-2xl p-8 border border-coral/40 text-center hover:shadow-xl transition-shadow md:col-span-2">
+            <div class="text-5xl mb-4">🏆</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-3">Capstone Project</h3>
+
+            <p class="text-lg text-gray-700 mb-4">Complete the final capstone simulation:<br />
+                Participate in a full committee session (live or recorded)<br />
+                Submit your position paper + resolution draft</p>
+
+            <p class="text-xl font-semibold text-coral mt-4">Show your skills in action!</p>
+        </div>
+    </div>
+
+    <div class="mt-12 text-center">
+        <p class="text-2xl font-bold text-coral mb-6">Once all requirements are met:</p>
+
+        <div
+            class="inline-block bg-gradient-to-r from-coral to-mint text-white text-2xl font-bold px-12 py-6 rounded-full shadow-lg transform hover:scale-105 transition-transform">
+            Your Certificate Will Be Issued Automatically</div>
+
+        <p class="text-lg text-gray-700 mt-6">Check your dashboard in 24&ndash;48 hours after final submission</p>
+    </div>
+</div>
+
+<footer class="bg-mint/30 py-8 text-center text-gray-700 text-lg">
+    <p>Model United Nations Course</p>
+</footer>
+<script>
+    function updateProgress() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        document.getElementById('progress-fill').style.height = scrolled + '%';
+        if (winScroll > 300) document.getElementById('back-to-top').classList.remove('hidden');
+        else document.getElementById('back-to-top').classList.add('hidden');
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    document.getElementById('fullscreen-btn').addEventListener('click', () => {
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+        else document.exitFullscreen();
+    });
+
+    document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>

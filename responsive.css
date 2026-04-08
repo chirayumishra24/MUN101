@@ -1,0 +1,116 @@
+/* responsive.css - Global Responsive Fixes for App View */
+
+/* Base image and video reset for responsiveness */
+img, video {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+}
+
+iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+/* Ensure padding and margins adjust correctly across all pages */
+@media screen and (max-width: 1024px) {
+    header, section, .max-w-5xl {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Ensure cards span correctly */
+    .md\:col-span-2 {
+        grid-column: span 1 / span 1 !important;
+    }
+}
+
+/* Specifically target App / Mobile view */
+@media screen and (max-width: 768px) {
+    /* Typography adjustments to realign text */
+    h1, .text-5xl, .text-7xl, .text-8xl {
+        font-size: 2.25rem !important;
+        line-height: 1.2 !important;
+    }
+
+    h2, h3, .text-3xl {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    p, li, .text-lg, .text-xl, span, .card-heading {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Spacing adjustments for app view */
+    header {
+        padding-top: 4rem !important;
+        padding-bottom: 2rem !important;
+        border-bottom-left-radius: 1.5rem !important;
+        border-bottom-right-radius: 1.5rem !important;
+    }
+
+    .py-12, .py-16, .py-20, .py-32 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+
+    .px-6, .px-8, .px-10 {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Content Card Realignments */
+    .content-card, .p-8, .p-10 {
+        padding: 1.25rem !important;
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Keep audio responsive */
+    .audio-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        background-size: cover !important;
+        aspect-ratio: auto !important;
+        padding: 1rem !important;
+        height: auto !important;
+        min-height: 200px;
+    }
+
+    .audio-container audio {
+        margin-top: 2rem !important;
+        width: 100% !important;
+    }
+
+    /* Adjust specific elements avoiding overflow */
+    #notes-panel {
+        width: 90vw !important;
+        max-width: 90vw !important;
+        left: 5vw !important;
+        bottom: 5rem !important;
+    }
+    
+    /* Interactive Activity frames minimum heights */
+    iframe[src*="activity"] {
+        min-height: 400px !important;
+        height: 60vh !important;
+    }
+}
+
+/* Ensure global box-sizing to prevent horizontal scrolling */
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+}

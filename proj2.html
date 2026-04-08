@@ -1,0 +1,221 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="responsive.css">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#F8F5F0',
+                    mint: '#A7F3D0',
+                    powder: '#BFDBFE',
+                    coral: '#FFB4A2',
+                },
+                borderRadius: {
+                    'xl': '1.75rem',
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    pulseSoft: {
+                        '0%, 100%': { opacity: '0.6' },
+                        '50%': { opacity: '0.9' },
+                    }
+                },
+                animation: {
+                    float: 'float 6s ease-in-out infinite',
+                    pulseSoft: 'pulseSoft 4s ease-in-out infinite',
+                }
+            },
+        },
+    }
+</script>
+<style type="text/css">
+    @media (prefers-reduced-motion: reduce) {
+
+        .bg-gif,
+        * {
+            animation: none !important;
+        }
+    }
+
+    .content-card {
+        transition: all 0.4s ease;
+    }
+
+    .content-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(255, 180, 162, 0.3);
+    }
+</style>
+<!-- Background -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
+        style="background-image: url('/s/articles/6964b5b0197e482518171202/images/dd.gif');">&nbsp;</div>
+
+    <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm">&nbsp;</div>
+</div>
+<!-- Progress Bar -->
+
+<div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
+    <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
+            id="progress-fill" style="height: 0%;">&nbsp;</div>
+    </div>
+</div>
+<!-- Buttons -->
+
+<p><button
+        class="fixed top-8 right-8 bg-powder/80 backdrop-blur-sm text-gray-900 p-5 rounded-full shadow-lg z-50 hover:bg-powder hover:scale-110 transition-all duration-300"
+        id="fullscreen-btn"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M3 9V3h6"></path>
+            <path d="M3 15v6h6"></path>
+            <path d="M21 9V3h-6"></path>
+            <path d="M21 15v6h-6"></path>
+        </svg></button><button
+        class="fixed bottom-8 right-8 bg-coral/80 backdrop-blur-sm text-white p-5 rounded-full shadow-lg z-50 hover:bg-coral hover:scale-110 transition-all duration-300 hidden"
+        id="back-to-top"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg></button><!-- Header --></p>
+
+<header class="relative py-32 px-8 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg">&nbsp;</div>
+
+    <div class="relative max-w-5xl mx-auto text-center animate-float">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">Project B</h1>
+
+        <p class="text-3xl font-semibold text-gray-800 mt-4">Country Profile Presentation (Video Submission)</p>
+    </div>
+</header>
+<!-- Steps Grid – Always 2×2 layout on large screens -->
+
+<div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"><!-- Step 1 -->
+        <div
+            class="bg-white/80 backdrop-blur-lg border border-mint/40 rounded-3xl p-8 shadow-xl content-card flex flex-col items-center text-center">
+            <div
+                class="bg-coral text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-6">
+                1</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-4">Prepare Your Country Profile</h3>
+
+            <p class="text-lg text-gray-700">Use the 1-page Word/Google Docs file you created in Project A (or update it
+                if needed).</p>
+        </div>
+        <!-- Step 2 -->
+
+        <div
+            class="bg-white/80 backdrop-blur-lg border border-powder/40 rounded-3xl p-8 shadow-xl content-card flex flex-col items-center text-center">
+            <div
+                class="bg-coral text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-6">
+                2</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-4">Record a 1&ndash;2 Minute Video</h3>
+
+            <p class="text-lg text-gray-700 mb-4">In the video, include:</p>
+
+            <ul class="text-left text-lg text-gray-700 space-y-2 list-disc pl-6">
+                <li>Introduce yourself and your country</li>
+                <li>Share 3&ndash;4 key points from your profile</li>
+                <li>Explain your country&rsquo;s stance/challenge</li>
+                <li>Speak clearly and confidently</li>
+            </ul>
+
+            <p class="text-sm text-gray-600 mt-4 italic">Tip: Record in a quiet, well-lit place. Phone camera is fine!
+            </p>
+        </div>
+        <!-- Step 3 -->
+
+        <div
+            class="bg-white/80 backdrop-blur-lg border border-coral/40 rounded-3xl p-8 shadow-xl content-card flex flex-col items-center text-center">
+            <div
+                class="bg-coral text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-6">
+                3</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-4">Upload Your Video</h3>
+
+            <p class="text-lg text-gray-700 mb-4">Upload to:</p>
+
+            <ul class="text-left text-lg text-gray-700 space-y-2 list-disc pl-6">
+                <li><strong>YouTube</strong> (Unlisted or Public &ndash; recommended)</li>
+                <li><strong>Instagram Reels</strong> (Public)</li>
+            </ul>
+
+            <p class="text-lg font-medium mt-6">Tag <strong>@skillizee</strong> in the caption/description</p>
+        </div>
+        <!-- Step 4 -->
+
+        <div
+            class="bg-white/80 backdrop-blur-lg border border-mint/40 rounded-3xl p-8 shadow-xl content-card flex flex-col items-center text-center">
+            <div
+                class="bg-coral text-white rounded-full w-16 h-16 flex items-center justify-center text-3xl font-bold mb-6">
+                4</div>
+
+            <h3 class="text-2xl font-bold text-coral mb-4">Submit Your Assignment</h3>
+
+            <p class="text-lg text-gray-700 mb-4">In the LMS assignment template, paste the</p>
+
+            <p class="text-xl font-bold text-coral">direct link to your uploaded video</p>
+
+            <p class="text-sm text-gray-600 mt-4">(YouTube link or Instagram post link)</p>
+        </div>
+    </div>
+    <!-- Quick Tips Box -->
+
+    <div class="mt-16 bg-white/60 backdrop-blur-md rounded-2xl p-10 border border-powder/50 shadow-xl text-center">
+        <h3 class="text-2xl font-bold text-coral mb-6">Quick Recording Tips</h3>
+
+        <ul class="space-y-4 text-lg max-w-3xl mx-auto">
+            <li>&bull; Find a quiet, well-lit place</li>
+            <li>&bull; Place your phone/camera at eye level</li>
+            <li>&bull; Smile and speak clearly &ndash; imagine you&#39;re addressing the UN!</li>
+            <li>&bull; Keep it natural &ndash; 1&ndash;2 minutes is perfect</li>
+            <li>&bull; Review once before uploading</li>
+        </ul>
+    </div>
+</div>
+
+<footer class="mt-20 py-8 text-center text-gray-600 bg-mint/30">
+    <p>Model United Nations Learning Program &bull; Powered by Skillizee</p>
+</footer>
+<script>
+    // Progress Bar
+    function updateProgress() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        document.getElementById('progress-fill').style.height = scrolled + '%';
+
+        // Show/hide back-to-top
+        if (winScroll > 300) {
+            document.getElementById('back-to-top').classList.remove('hidden');
+        } else {
+            document.getElementById('back-to-top').classList.add('hidden');
+        }
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    // Fullscreen toggle
+    document.getElementById('fullscreen-btn').addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    // Back to top
+    document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>

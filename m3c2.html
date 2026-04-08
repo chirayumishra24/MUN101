@@ -1,0 +1,795 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <meta charset="UTF-8">
+                                                        <meta name="viewport"
+                                                            content="width=device-width, initial-scale=1.0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="responsive.css">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#F8F5F0',
+                    mint: '#A7F3D0',
+                    powder: '#BFDBFE',
+                    coral: '#FFB4A2',
+                },
+                borderRadius: {
+                    'xl': '1.75rem',
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    pulseSoft: {
+                        '0%, 100%': { opacity: '0.6' },
+                        '50%': { opacity: '0.9' },
+                    }
+                },
+                animation: {
+                    float: 'float 6s ease-in-out infinite',
+                    pulseSoft: 'pulseSoft 4s ease-in-out infinite',
+                }
+            },
+        },
+    }
+</script>
+<style type="text/css">
+    @media (prefers-reduced-motion: reduce) {
+
+        .bg-gif,
+        * {
+            animation: none !important;
+        }
+    }
+
+    .content-card {
+        transition: all 0.4s ease;
+    }
+
+    .content-card:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 25px 50px rgba(255, 180, 162, 0.4);
+    }
+
+    .step-number {
+        background: #FFB4A2;
+        color: white;
+        min-width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        font-weight: bold;
+        box-shadow: 0 8px 20px rgba(255, 180, 162, 0.4);
+    }
+
+    .full-width-card {
+        grid-column: 1 / -1;
+    }
+</style>
+<!-- Background -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
+        style="background-image: url('/s/articles/6960cccde0ac3864df019da9/images/7gif.gif');">&nbsp;</div>
+
+    <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm">&nbsp;</div>
+</div>
+<!-- Progress Bar -->
+
+<div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
+    <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
+            id="progress-fill" style="height: 0%;">&nbsp;</div>
+    </div>
+</div>
+<!-- Buttons -->
+
+<p><button
+        class="fixed top-8 right-8 bg-powder/80 backdrop-blur-sm text-gray-900 p-5 rounded-full shadow-lg z-50 hover:bg-powder hover:scale-110 transition-all duration-300"
+        id="fullscreen-btn"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M3 9V3h6"></path>
+            <path d="M3 15v6h6"></path>
+            <path d="M21 9V3h-6"></path>
+            <path d="M21 15v6h-6"></path>
+        </svg></button><button
+        class="fixed bottom-8 right-8 bg-coral/80 backdrop-blur-sm text-white p-5 rounded-full shadow-lg z-50 hover:bg-coral hover:scale-110 transition-all duration-300 hidden"
+        id="back-to-top"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg></button><!-- Header --></p>
+
+<header class="relative py-32 px-8 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg">&nbsp;</div>
+
+    <div class="relative max-w-5xl mx-auto text-center animate-float">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">Chapter 3.2<br />
+            <span class="text-coral block mt-4" style="color: #FF6B6B;">Flow of Debate in MUN</span>
+        </h1>
+    </div>
+</header>
+
+<p><button
+        class="fixed bottom-6 left-8 z-50 w-16 h-16 rounded-full bg-amber-400 border-4 border-white shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 backdrop-blur-md"
+        id="notes-btn"><img alt="Notes" class="w-8 h-8"
+            src="/s/articles/6971c474348e12598d489e16/images/notes.png" /></button><!-- Notes Panel --></p>
+
+<div class="fixed bottom-28 left-8 z-50 w-80 max-w-[90vw] bg-white/80 backdrop-blur-xl border border-mint/50 rounded-2xl shadow-2xl p-4 hidden"
+    id="notes-panel">
+    <h3 class="text-lg font-bold text-coral mb-3 text-center">My Notes</h3>
+    <textarea
+        class="w-full rounded-xl p-3 text-sm border border-powder/60 focus:outline-none focus:ring-2 focus:ring-coral/40 bg-white/90 resize-none"
+        id="notes-text" placeholder="Write your notes here..." rows="6"></textarea>
+
+    <div class="flex justify-between items-center mt-4 gap-2"><button
+            class="flex-1 bg-red-100 text-red-600 text-sm font-semibold py-2 rounded-xl hover:bg-red-200 transition"
+            id="clear-notes">Clear</button><button
+            class="flex-1 bg-mint/40 text-gray-800 text-sm font-semibold py-2 rounded-xl hover:bg-mint/60 transition"
+            id="download-notes">Download</button></div>
+</div>
+<script>
+    const notesBtn = document.getElementById("notes-btn");
+    const notesPanel = document.getElementById("notes-panel");
+    const notesText = document.getElementById("notes-text");
+    const clearBtn = document.getElementById("clear-notes");
+    const downloadBtn = document.getElementById("download-notes");
+
+    // Load saved notes
+    notesText.value = localStorage.getItem("mun_notes") || "";
+
+    // Toggle panel
+    notesBtn.addEventListener("click", () => {
+        notesPanel.classList.toggle("hidden");
+    });
+
+    // Save notes automatically
+    notesText.addEventListener("input", () => {
+        localStorage.setItem("mun_notes", notesText.value);
+    });
+
+    // Clear notes
+    clearBtn.addEventListener("click", () => {
+        if (confirm("Clear all notes?")) {
+            notesText.value = "";
+            localStorage.removeItem("mun_notes");
+        }
+    });
+
+    // Download notes
+    downloadBtn.addEventListener("click", () => {
+        const blob = new Blob([notesText.value], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "MUN_Notes.txt";
+        link.click();
+        URL.revokeObjectURL(link.href);
+    });
+</script>
+
+<div class="audio-container">
+    <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
+        <source src="https://pa2-cmd.github.io/MUN/mun3.2.mp3" type="audio/mp3" /> Your browser does not support the
+        audio element.
+    </audio>
+</div>
+<style type="text/css">
+    .audio-container {
+        position: relative;
+        background: url('/s/articles/6960cccde0ac3864df019da9/images/Model United nation.gif') center center no-repeat;
+        background-size: contain;
+        /* keeps the GIF's aspect ratio */
+        border-radius: 16px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+        margin: 1rem auto;
+        width: 90%;
+        max-width: 900px;
+        aspect-ratio: 1920 / 1080;
+        /* maintain original proportion */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Modern styled audio */
+    .audio-container audio {
+        width: 100%;
+        border-radius: 12px;
+        border: 2px solid #2D2B7E;
+        background: #F5F5FF;
+        height: 50px;
+        padding: 4px;
+        box-shadow: 0 3px 10px rgba(45, 43, 126, 0.3);
+    }
+
+    /* Lavender-toned player controls */
+    audio::-webkit-media-controls-panel {
+        background-color: #E6E6FA;
+        border-radius: 12px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-timeline,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display,
+    audio::-webkit-media-controls-volume-slider {
+        filter: hue-rotate(240deg) saturate(1.2);
+    }
+</style>
+<!-- Video -->
+<section class="max-w-5xl mx-auto px-8 py-12">
+    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl overflow-hidden shadow-xl content-card">
+        <div class="aspect-video"><iframe allowfullscreen="" class="w-full h-full" frameborder="0" scrolling="no"
+                src="https://www.youtube.com/embed/7BS798Q9urw?rel=0"
+                title="Model United Nations Flow of Debate Training Video"></iframe></div>
+
+        <div class="p-6 text-center">
+            <p class="text-2xl font-bold text-coral">Model United Nations Flow of Debate Training Video</p>
+
+            <p class="text-lg mt-2" style="font-size: 18px;">Watch the full video to see the complete flow in action!
+            </p>
+        </div>
+    </div>
+</section>
+<!-- Hero Image -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="rounded-xl overflow-hidden shadow-xl content-card"><img alt="Flow of Debate"
+            class="w-full h-96 object-contain object-center bg-cream brightness-90"
+            src="/s/articles/695f6e0691bc1e288cd63e36/images/image-20260108141247-1.png" /></div>
+</section>
+<!-- 13 Points – Updated Layout: Always 2 columns for normal cards -->
+
+<section class="max-w-6xl mx-auto px-8 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12"><!-- Point 1 --><!-- Point 1 with Image -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <!-- Centered Image -->
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="MUN Introduction and Roles"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/6960b5053775a6152d87f0c8/images/Gemini_Generated_Image_cf3rzscf3rzscf3r.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">1</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Introduction</h3>
+
+                    <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                        <li><strong>Welcome:</strong> The Model UN Working Group in Ukraine introduces the session and
+                            explains its purpose.</li>
+                        <li><strong>Roles:</strong>
+                            <ul class="ml-6 mt-2 space-y-2 list-disc">
+                                <li><strong>Chair:</strong> Moderates debate, ensures delegates speak in order.</li>
+                                <li><strong>Delegates:</strong> Represent countries (e.g., China, Brazil, Canada,
+                                    Ukraine).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 2 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <!-- Centered Image -->
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="MUN Roll Call"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini.png"
+                    style="width: 1024px; height: 576px;" /></div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">2</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Roll Call</h3>
+
+                    <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                        <li>Delegates state their status:
+                            <ul class="ml-6 mt-2 space-y-2 list-disc">
+                                <li><strong>Present</strong> &rarr; Can vote Yea, Nay, or Abstain.</li>
+                                <li><strong>Present and Voting</strong> &rarr; Can vote only Yea or Nay.</li>
+                            </ul>
+                        </li>
+                        <li class="mt-4"><strong>Example:</strong></li>
+                        <li>Brazil: Present</li>
+                        <li>Canada: Present and Voting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 3 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Opening the Speakers’ List"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_rrf611rrf611rrf6.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">3</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Opening the Speakers&rsquo; List</h3>
+
+                    <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                        <li><strong>Purpose:</strong> Allows delegates to formally present their position.</li>
+                        <li><strong>Process:</strong>
+                            <ol class="ml-6 mt-2 space-y-2 list-decimal">
+                                <li>The delegates raise the motion to open the Speakers&rsquo; List and set a speaking
+                                    time.</li>
+                                <li>Delegates request to be added by raising their respective placards.</li>
+                                <li>Speakers&rsquo; List may be closed at any time.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 4 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Formal Motion Example"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/2 (1).png" style="width: 1024px; height: 576px;" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">4</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Formal Motion Example</h3>
+
+                    <ul class="space-y-3 text-lg" style="font-size: 18px;">
+                        <li>Brazil: Motion to open the Speakers&rsquo; List with 2-minute speaking time per delegate.
+                        </li>
+                        <li>Canada: Second.</li>
+                        <li>Chair: Motion passes. Delegates wishing to speak raise placards.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 5 - Full width with Image -->
+
+        <div
+            class="full-width-card bg-gradient-to-r from-coral/20 to-mint/20 rounded-xl overflow-hidden shadow-2xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 py-6"><img alt="Speaking Example"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_G.png" /></div>
+
+            <div class="p-12">
+                <div class="flex items-center mb-8">
+                    <div class="step-number mr-8">5</div>
+
+                    <h3 class="text-3xl font-bold text-coral">Speaking Example</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-lg font-semibold mb-4"><span style="font-size:18px;">Speeches:</span></p>
+
+                        <ul class="space-y-4 text-lg">
+                            <li><span style="font-size:18px;">Brazil: Proposes order of discussion &mdash; Environmental
+                                    Sustainability first, followed by Space Exploration. Emphasizes urgency of
+                                    biodiversity protection. Yields remaining time to Chair.</span></li>
+                            <li><span style="font-size:18px;">Canada: Supports Brazil&rsquo;s focus on environmental
+                                    sustainability. Yields time to China.</span></li>
+                            <li><span style="font-size:18px;">China: Agrees with Canada, stresses need for immediate
+                                    global action. Yields to Chair.</span></li>
+                            <li><span style="font-size:18px;">Ukraine: Supports prioritizing environmental
+                                    protection.</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="text-lg font-semibold mb-4"><span style="font-size:18px;">Questions on
+                                Positions:</span></p>
+
+                        <ul class="space-y-4 text-lg">
+                            <li><span style="font-size:18px;">Canada asks whether Ukraine opposes debating space
+                                    exploration later.</span></li>
+                            <li><span style="font-size:18px;">Ukraine: Focus should remain on environmental
+                                    sustainability.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Point 6 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Closing the Speakers’ List"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_7k5ltd7k5ltd7k5l.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">6</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Closing the Speakers&rsquo; List</h3>
+
+                    <ul class="space-y-3 text-lg" style="font-size: 18px;">
+                        <li><strong>Motion Example:</strong></li>
+                        <li>Brazil: The delegate of Brazil would like to raise a motion to close the Speaker&rsquo;s
+                            List</li>
+                        <li>Voting: The delegates vote in favour or against the motion, if there is a majority, the
+                            motion passes.</li>
+                        <li>Chair: Motion passes.</li>
+                    </ul>
+
+                    <p class="text-lg mt-4" style="font-size: 18px;"><strong>Note: Delegates must yield remaining time
+                            after speaking.</strong></p>
+                </div>
+            </div>
+        </div>
+        <!-- Point 7 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Agenda Setting"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_q3j3fvq3j3fvq3j3.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">7</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Agenda Setting</h3>
+
+                    <ul class="space-y-3 text-lg" style="font-size: 18px;">
+                        <li><strong>Motion Example:</strong></li>
+                        <li>Canada: Motion to set agenda: Environmental Sustainability first, then Space Exploration.
+                        </li>
+                        <li>Chair: Motion passes.</li>
+                        <li>Debate begins on Environmental Sustainability.</li>
+                        <li>Next agenda topics require a motion to proceed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 8 - Full width with Image -->
+
+        <div
+            class="full-width-card bg-gradient-to-r from-mint/20 to-powder/20 rounded-xl overflow-hidden shadow-2xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 py-6"><img alt="Moderated Caucus"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_jhpbi2jhpbi2jhpb.png" />
+            </div>
+
+            <div class="p-12">
+                <div class="flex items-center mb-8">
+                    <div class="step-number mr-8">8</div>
+
+                    <h3 class="text-3xl font-bold text-coral">Moderated Caucus</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-lg font-semibold mb-4"><span style="font-size:18px;">Definition &amp;
+                                Process:</span></p>
+
+                        <ul class="space-y-4 text-lg">
+                            <li><span style="font-size:18px;"><strong>Definition:</strong> Structured debate with set
+                                    speaking times.</span></li>
+                            <li><span style="font-size:18px;"><strong>Process:</strong></span>
+                                <ol class="ml-6 mt-2 space-y-2 list-decimal">
+                                    <li><span style="font-size:18px;">Delegate motions for a Moderated Caucus.</span>
+                                    </li>
+                                    <li><span style="font-size:18px;">The chair calls on delegates one by one.</span>
+                                    </li>
+                                    <li><span style="font-size:18px;">Requires subtopic, speaking time, and total
+                                            duration.</span></li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <p class="text-lg font-semibold mb-4"><span style="font-size:18px;">Example:</span></p>
+
+                        <ul class="space-y-3 text-lg">
+                            <li><span style="font-size:18px;">Canada: The delegate of Canada would like to raise a
+                                    motion to move into a moderated caucus on the topic &ldquo;Environment
+                                    Sustainability with special emphasis on Sustainable Development Goals&rdquo; with
+                                    per speaker time being 60 seconds and total time being 1 hour.</span></li>
+                            <li><span style="font-size:18px;">Voting in favour of the motion or against, if there is a
+                                    majority in votes, the motion passes.</span></li>
+                            <li><span style="font-size:18px;">Chair: Motion passes</span></li>
+                        </ul>
+
+                        <p class="text-lg mt-4" style="font-size: 18px;"><strong>Note:</strong> The committee can move
+                            into either a moderated or unmoderated caucus at any time. It also is not necessary to begin
+                            with a moderated caucus first.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Point 9 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Unmoderated Caucus"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_c7oakfc7oakfc7oa.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">9</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Unmoderated Caucus</h3>
+
+                    <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                        <li><strong>Definition:</strong> Informal debate. Delegates may move freely, discuss privately,
+                            draft resolutions, or take breaks.</li>
+                        <li><strong>Process Example:</strong>
+                            <ul class="ml-6 mt-2 space-y-2 list-disc">
+                                <li>Brazil: Motion for 15-minute Unmoderated Caucus to discuss Draft Resolution 1.0.
+                                </li>
+                                <li>Canada: Second. Motion passes.</li>
+                                <li>Delegates collaborate freely.</li>
+                                <li>Extension motion: Ukraine moves to add 5 minutes; seconded by Brazil. Motion passes.
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p class="text-lg mt-4" style="font-size: 18px;"><strong>Note:</strong> Even though the delegates
+                        are allowed to move freely, debate and discuss, the delegates should not indulge in any
+                        unparliamentary behaviour as they are still being awarded marks for their negotiation and
+                        convincing skills.The delegates are advised to engage in discussions and talk to other delegates
+                        regarding their concerns and beliefs.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Point 10 with Image -->
+
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 "><img alt="Points in MUN"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/Gemini_Generated_Image_x6yjy0x6yjy0x6yj.png" />
+            </div>
+
+            <div class="p-10 flex items-start">
+                <div class="step-number mr-6 flex-shrink-0">10</div>
+
+                <div class="flex-1">
+                    <h3 class="text-2xl font-bold text-coral mb-4">Points</h3>
+
+                    <p class="text-lg mb-4"><span style="font-size:18px;">Points do not affect committee flow
+                            directly:</span></p>
+
+                    <ul class="space-y-3 text-lg">
+                        <li><span style="font-size:18px;"><strong>Point of Inquiry:</strong> Clarify procedure or topic.
+                                Example: &ldquo;How much time remains?&amp;rdquo,&ldquo;What is the order of
+                                speeches?&rdquo;;</span></li>
+                        <li><span style="font-size:18px;"><strong>Point of Personal Privilege:</strong> Related to
+                                personal comfort (e.g., adjust microphone, leave room).</span></li>
+                        <li><span style="font-size:18px;"><strong>Point of Information:</strong> Ask for clarification
+                                on draft resolution or topic. These are also raised to question other delegates during
+                                their speeches. </span></li>
+                        <li><span style="font-size:18px;"><strong>Point of Order:</strong>Correct factual mistakes in
+                                the speeches of other delegates or in case of procedural faults.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Point 11 - Full width with Image -->
+
+        <div
+            class="full-width-card bg-gradient-to-r from-powder/20 to-coral/20 rounded-xl overflow-hidden shadow-2xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 py-6"><img alt="Draft Resolutions"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/ChatGPT Image Jan 9, 2026, 02_16_20 PM.png" />
+            </div>
+
+            <div class="p-12">
+                <div class="flex items-center mb-8">
+                    <div class="step-number mr-8">11</div>
+
+                    <h3 class="text-3xl font-bold text-coral">Draft Resolutions</h3>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <ul class="space-y-4 text-lg">
+                            <li><span style="font-size:18px;">Delegates draft resolutions during caucuses.</span></li>
+                            <li><span style="font-size:18px;"><strong>Amendments:</strong></span>
+                                <ul class="ml-6 mt-2 space-y-2 list-disc">
+                                    <li><span style="font-size:18px;"><strong>Friendly:</strong> Authors agree &rarr;
+                                            added automatically.</span></li>
+                                    <li><span style="font-size:18px;"><strong>Unfriendly:</strong> Authors disagree
+                                            &rarr; requires committee vote.</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <ul class="space-y-4 text-lg">
+                            <li><span style="font-size:18px;"><strong>Example:</strong></span>
+
+                                <ul class="ml-6 mt-2 space-y-2 list-disc">
+                                    <li><span style="font-size:18px;">Brazil motions an unfriendly amendment to exempt
+                                            certain substances from classification.</span></li>
+                                    <li><span style="font-size:18px;">Chair calls vote &rarr; Amendment passes and is
+                                            added.</span></li>
+                                </ul>
+                            </li>
+                            <li><span style="font-size:18px;"><strong>Right of Reply:</strong> Delegates may respond if
+                                    their country is criticized.</span></li>
+                            <li><span style="font-size:18px;"><strong>Withdrawing a Resolution:</strong> If an
+                                    unfriendly amendment is unacceptable, a country may withdraw the resolution,
+                                    negotiate, revise, and reintroduce it.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Point 12 - Full width with Image -->
+
+        <div
+            class="full-width-card bg-gradient-to-r from-mint/20 to-powder/20 rounded-xl overflow-hidden shadow-2xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 py-6"><img alt="Voting Procedures"
+                    class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/ChatGPT.png" /></div>
+
+            <div class="p-12">
+                <div class="flex items-center mb-8">
+                    <div class="step-number mr-8">12</div>
+
+                    <h3 class="text-3xl font-bold text-coral">Voting Procedures</h3>
+                </div>
+
+                <ul class="space-y-6 text-lg max-w-4xl mx-auto">
+                    <li><span style="font-size:18px;">A motion to enter the voting procedure is required before
+                            voting.</span></li>
+                    <li><span style="font-size:18px;">Two-for, Two-against debate may occur before final vote.</span>
+                    </li>
+                    <li><span style="font-size:18px;">Roll call voting: Delegates called individually, vote Yea, Nay, or
+                            Abstain.</span></li>
+                    <li><span style="font-size:18px;">Delegates who were present and voting at roll call cannot abstain
+                            on substantive votes.</span></li>
+                    <li><span style="font-size:18px;"><strong>Example:</strong> Roll call vote on draft resolution
+                            Sanctions on Venezuela.</span>
+                        <ul class="ml-6 mt-2 space-y-2 list-disc">
+                            <li><span style="font-size:18px;">Brazil &rarr; Yea</span></li>
+                            <li><span style="font-size:18px;">China &rarr; Nay</span></li>
+                            <li><span style="font-size:18px;">Ukraine &rarr; Yea</span></li>
+                            <li><span style="font-size:18px;">Canada &rarr; Yea</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Point 13 - Full width with Image -->
+
+        <div
+            class="full-width-card bg-gradient-to-r from-coral/20 to-mint/20 rounded-xl overflow-hidden shadow-2xl content-card">
+            <div class="w-full flex justify-center items-center bg-cream/50 py-6"><img
+                    alt="Suspending or Ending Committee" class="max-w-full h-auto object-contain rounded-lg shadow-md"
+                    src="/s/articles/695f6e0691bc1e288cd63e36/images/ChatGPT Image Jan 9, 2026, 02_37_25 PM.png" />
+            </div>
+
+            <div class="p-12">
+                <div class="flex items-center mb-8">
+                    <div class="step-number mr-8">13</div>
+
+                    <h3 class="text-3xl font-bold text-coral">Suspending or Ending Committee</h3>
+                </div>
+
+                <ul class="space-y-6 text-lg max-w-4xl mx-auto">
+                    <li><span style="font-size:18px;"><strong>Suspending session:</strong> Motion to pause committee
+                            (e.g., lunch).</span></li>
+                    <li><span style="font-size:18px;"><strong>Adjourn debate:</strong> Motion to end debate on current
+                            topic.</span></li>
+                    <li><span style="font-size:18px;"><strong>Adjourn committee:</strong> Motion to end the entire
+                            session.</span></li>
+                    <li><span style="font-size:18px;"><strong>Examples of motions passed:</strong></span>
+                        <ul class="ml-6 mt-2 space-y-2 list-disc">
+                            <li><span style="font-size:18px;">Suspend until the next meeting &rarr; passes.</span></li>
+                            <li><span style="font-size:18px;">Move to the next agenda (Space Exploration) &rarr;
+                                    passes.</span></li>
+                            <li><span style="font-size:18px;">Adjourn committee entirely &rarr; passes.</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p><strong><!-- Activity Section --> </strong></p>
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card text-center">
+        <h3 class="text-3xl font-bold text-coral mb-8"><strong>Interactive Activity</strong></h3>
+
+        <p class="text-lg mb-8" style="font-size: 18px;"><strong>Put yourself in the shoes of a delegate and experience
+                the full MUN debate process!</strong></p>
+        <strong><!-- Embedded Activity --> </strong>
+
+        <div class="w-full"
+            style="height: 1100px; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            <strong><iframe allowfullscreen="" class="w-full h-full border-0"
+                    src="https://chirayumishra24.github.io/MUN/activity3.2.html"
+                    title="MUN Activity 3.2: Full Debate Simulation"></iframe></strong></div>
+        <strong> </strong>
+
+        <p class="text-lg mt-8 text-gray-600" style="font-size: 18px;"><strong>Complete the activity above to deepen
+                your understanding of Model UN!</strong></p>
+        <strong> </strong>
+    </div>
+</section>
+
+<footer class="bg-mint/30 py-8 text-center text-gray-700 text-lg">
+    <p><strong>Model United Nations Course</strong></p>
+</footer>
+
+<p><strong>
+        <script>
+            function updateProgress() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+                document.getElementById('progress-fill').style.height = scrolled + '%';
+                if (winScroll > 300) document.getElementById('back-to-top').classList.remove('hidden');
+                else document.getElementById('back-to-top').classList.add('hidden');
+            }
+            window.addEventListener('scroll', updateProgress);
+            window.addEventListener('resize', updateProgress);
+            updateProgress();
+
+            document.getElementById('fullscreen-btn').addEventListener('click', () => {
+                if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+                else document.exitFullscreen();
+            });
+
+            document.getElementById('back-to-top').addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        </script>
+    </strong></p>

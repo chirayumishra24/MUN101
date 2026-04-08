@@ -1,0 +1,411 @@
+<div>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <meta charset="UTF-8">
+                                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<title></title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="responsive.css">
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    cream: '#F8F5F0',
+                    mint: '#A7F3D0',
+                    powder: '#BFDBFE',
+                    coral: '#FFB4A2',
+                },
+                borderRadius: {
+                    'xl': '1.75rem',
+                },
+                keyframes: {
+                    float: {
+                        '0%, 100%': { transform: 'translateY(0)' },
+                        '50%': { transform: 'translateY(-10px)' },
+                    },
+                    pulseSoft: {
+                        '0%, 100%': { opacity: '0.6' },
+                        '50%': { opacity: '0.9' },
+                    }
+                },
+                animation: {
+                    float: 'float 6s ease-in-out infinite',
+                    pulseSoft: 'pulseSoft 4s ease-in-out infinite',
+                }
+            },
+        },
+    }
+</script>
+<style type="text/css">
+    @media (prefers-reduced-motion: reduce) {
+
+        .bg-gif,
+        * {
+            animation: none !important;
+        }
+    }
+
+    .content-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .content-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(255, 180, 162, 0.3);
+    }
+
+    .card-heading {
+        font-size: 1.875rem;
+        /* 30px */
+        font-weight: bold;
+        color: #FFB4A2;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+</style>
+<!-- Animated GIF Background with Overlay -->
+<div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
+        style="background-image: url('/s/articles/6960cccde0ac3864df019da9/images/3gif.gif');">&nbsp;</div>
+
+    <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm">&nbsp;</div>
+</div>
+<!-- Slim Vertical Progress Bar -->
+
+<div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
+    <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
+            id="progress-fill" style="height: 0%;">&nbsp;</div>
+    </div>
+</div>
+<!-- Fullscreen Button - Top Right -->
+
+<p><button aria-label="Toggle Fullscreen"
+        class="fixed top-8 right-8 bg-powder/80 backdrop-blur-sm text-gray-900 p-5 rounded-full shadow-lg z-50 hover:bg-powder hover:scale-110 transition-all duration-300"
+        id="fullscreen-btn"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9V3h6"></path>
+            <path d="M3 15v6h6"></path>
+            <path d="M21 9V3h-6"></path>
+            <path d="M21 15v6h-6"></path>
+        </svg></button><!-- Back to Top Button - Bottom Right --><button aria-label="Back to Top"
+        class="fixed bottom-8 right-8 bg-coral/80 backdrop-blur-sm text-white p-5 rounded-full shadow-lg z-50 hover:bg-coral hover:scale-110 transition-all duration-300 hidden"
+        id="back-to-top"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5"></path>
+            <path d="M5 12l7-7 7 7"></path>
+        </svg></button><!-- Header --></p>
+
+<header class="relative py-32 px-8 overflow-hidden">
+    <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg">&nbsp;</div>
+
+    <div class="relative max-w-5xl mx-auto text-center animate-float">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+            style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">Chapter 2.1<br />
+            <span class="text-coral block mt-4" style="color: #FF6B6B;">How do MUN conferences work?</span>
+        </h1>
+    </div>
+</header>
+<!-- Notes Button (Bottom Left) -->
+
+<p><button
+        class="fixed bottom-6 left-8 z-50 w-16 h-16 rounded-full bg-amber-400 border-4 border-white shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 backdrop-blur-md"
+        id="notes-btn"><img alt="Notes" class="w-8 h-8"
+            src="/s/articles/6971c474348e12598d489e16/images/notes.png" /></button><!-- Notes Panel --></p>
+
+<div class="fixed bottom-28 left-8 z-50 w-80 max-w-[90vw] bg-white/80 backdrop-blur-xl border border-mint/50 rounded-2xl shadow-2xl p-4 hidden"
+    id="notes-panel">
+    <h3 class="text-lg font-bold text-coral mb-3 text-center">My Notes</h3>
+    <textarea
+        class="w-full rounded-xl p-3 text-sm border border-powder/60 focus:outline-none focus:ring-2 focus:ring-coral/40 bg-white/90 resize-none"
+        id="notes-text" placeholder="Write your notes here..." rows="6"></textarea>
+
+    <div class="flex justify-between items-center mt-4 gap-2"><button
+            class="flex-1 bg-red-100 text-red-600 text-sm font-semibold py-2 rounded-xl hover:bg-red-200 transition"
+            id="clear-notes">Clear</button><button
+            class="flex-1 bg-mint/40 text-gray-800 text-sm font-semibold py-2 rounded-xl hover:bg-mint/60 transition"
+            id="download-notes">Download</button></div>
+</div>
+<script>
+    const notesBtn = document.getElementById("notes-btn");
+    const notesPanel = document.getElementById("notes-panel");
+    const notesText = document.getElementById("notes-text");
+    const clearBtn = document.getElementById("clear-notes");
+    const downloadBtn = document.getElementById("download-notes");
+
+    // Load saved notes
+    notesText.value = localStorage.getItem("mun_notes") || "";
+
+    // Toggle panel
+    notesBtn.addEventListener("click", () => {
+        notesPanel.classList.toggle("hidden");
+    });
+
+    // Save notes automatically
+    notesText.addEventListener("input", () => {
+        localStorage.setItem("mun_notes", notesText.value);
+    });
+
+    // Clear notes
+    clearBtn.addEventListener("click", () => {
+        if (confirm("Clear all notes?")) {
+            notesText.value = "";
+            localStorage.removeItem("mun_notes");
+        }
+    });
+
+    // Download notes
+    downloadBtn.addEventListener("click", () => {
+        const blob = new Blob([notesText.value], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "MUN_Notes.txt";
+        link.click();
+        URL.revokeObjectURL(link.href);
+    });
+</script>
+
+<div class="audio-container">
+    <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
+        <source src="https://pa2-cmd.github.io/MUN/mun2.1.mp3" type="audio/mp3" /> Your browser does not support the
+        audio element.
+    </audio>
+</div>
+<style type="text/css">
+    .audio-container {
+        position: relative;
+        background: url('/s/articles/6960cccde0ac3864df019da9/images/Model United nation.gif') center center no-repeat;
+        background-size: contain;
+        /* keeps the GIF's aspect ratio */
+        border-radius: 16px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+        margin: 1rem auto;
+        width: 90%;
+        max-width: 900px;
+        aspect-ratio: 1920 / 1080;
+        /* maintain original proportion */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* Modern styled audio */
+    .audio-container audio {
+        width: 100%;
+        border-radius: 12px;
+        border: 2px solid #2D2B7E;
+        background: #F5F5FF;
+        height: 50px;
+        padding: 4px;
+        box-shadow: 0 3px 10px rgba(45, 43, 126, 0.3);
+    }
+
+    /* Lavender-toned player controls */
+    audio::-webkit-media-controls-panel {
+        background-color: #E6E6FA;
+        border-radius: 12px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-timeline,
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display,
+    audio::-webkit-media-controls-volume-slider {
+        filter: hue-rotate(240deg) saturate(1.2);
+    }
+</style>
+<!-- Embedded Video (YouTube - Full Width 16:9) -->
+<section class="max-w-7xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-10 shadow-xl content-card">
+        <!-- Video Container -->
+        <div class="w-full rounded-xl overflow-hidden shadow-lg">
+            <div class="relative w-full" style="padding-top: 56.25%;"><!-- 16:9 ratio --><iframe allowfullscreen=""
+                    class="absolute top-0 left-0 w-full h-full" frameborder="0"
+                    src="https://www.youtube.com/embed/VhmAqXsy9bQ?rel=0" title="MUN Conference Video"></iframe></div>
+        </div>
+        <!-- Text Content -->
+
+        <div class="mt-10 text-center">
+            <p class="text-lg font-semibold text-coral mb-3"><span style="font-size:36px;">Understanding MUN Conference
+                    Flow 🇺🇳</span></p>
+
+            <h3 class="text-2xl font-bold text-mint mb-4">How a Model United Nations Conference Works</h3>
+
+            <p class="text-lg leading-relaxed px-6 md:px-20" style="font-size: 18px;">This video explains the structure
+                of a Model United Nations (MUN) conference, including registration, committee sessions, debate formats,
+                diplomacy procedures, and how delegates collaborate to draft resolutions and solve global issues.</p>
+        </div>
+    </div>
+</section>
+<!-- Objective Card -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card">
+        <p class="text-center text-lg md:text-xl leading-relaxed animate-float"><strong>Objective:</strong> Familiarize
+            yourself with the conference structure, the flow of debate, and committee roles.</p>
+    </div>
+</section>
+<!-- Hero Image -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="rounded-xl overflow-hidden shadow-xl content-card"><img alt="MUN Conference in session"
+            class="w-full h-96 object-cover brightness-90"
+            src="/s/articles/695f609191bc1e288cd637f5/images/image-20260108131521-1.png" /></div>
+</section>
+<!-- Embedded Video (YouTube Short) -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl p-10 shadow-xl content-card">
+        <div class="grid grid-cols-1 md:grid-cols-[30%_70%] gap-10 items-stretch"><!-- Video Section (30%) -->
+            <div class="flex flex-col">
+                <div class="h-[320px] md:h-[360px] rounded-lg overflow-hidden"><iframe allowfullscreen=""
+                        class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/LpK-T77J5HU"
+                        title="What happens at a MUN Conference?"></iframe></div>
+            </div>
+            <!-- Text Section (70%) -->
+
+            <div class="flex flex-col justify-center"><!-- Video Title moved here -->
+                <p class="text-lg font-semibold text-coral text-center mb-2"><span style="font-size:36px;">What happens
+                        at a MUN Conference? 🇺🇳</span></p>
+
+                <p class="text-lg font-semibold text-coral text-center mb-2">&nbsp;</p>
+
+                <h3 class="text-2xl font-bold text-mint text-center mb-4">Introduction to Model United Nations</h3>
+                <!-- Paragraph spacing increased -->
+
+                <p class="text-lg leading-relaxed text-center px-6 md:px-10 mt-4" style="font-size: 18px;">Model United
+                    Nations (MUN) conferences are educational simulations where students role-play as diplomats
+                    representing countries or organizations to debate and find solutions to global issues. The
+                    conferences are hosted by schools, universities, and organizations at various levels, from middle
+                    school to university.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="max-w-5xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <!-- Intro to Registration --><!-- Intro to Registration + Chapter 2.2 reference -->
+    <div
+        class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl p-10 shadow-xl content-card md:col-span-2">
+        <h3 class="card-heading">Conference Registration</h3>
+        <!-- Image below title --><!-- Updated larger image -->
+
+        <div class="flex justify-center my-12"><img alt="Conference Registration Illustration"
+                class="max-w-3xl w-full md:max-w-4xl rounded-2xl shadow-2xl object-contain"
+                src="/s/articles/6970a6670486a06cb65baf66/images/rumaal.png" /></div>
+
+        <p class="text-lg leading-relaxed text-center mb-6" style="font-size: 18px;">Conference registration is the
+            essential first step in participating in a Model United Nations (MUN) event. Teams register, receive
+            countries and committees to represent <em>(refer to Chapter 2.2 for understanding the different
+                committees)</em>.</p>
+
+        <p class="text-lg font-semibold text-coral mb-4">Here&rsquo;s how it typically works:</p>
+
+        <ul class="space-y-4 text-lg list-disc list-inside" style="font-size: 18px;">
+            <li>Schools or individual teams identify an upcoming MUN conference that matches their level and interests.
+            </li>
+            <li>Teams or delegates complete an online or paper registration form, providing participant details, advisor
+                information (if required), and preferences for country and committee assignments.</li>
+            <li>After submitting the form, teams often pay a registration fee to confirm their participation.</li>
+            <li>Conference organizers assign each team or delegate a specific country and committee, usually based on
+                the team&rsquo;s preferences, experience level, and availability.</li>
+            <li>Once the assignments are released, delegates can begin preparing research and position papers to
+                represent their designated country or organization. <strong>(Position papers are sent to the executive
+                    board before the conference sessions or might be sent later, based on the decision of executive
+                    board members.)</strong></li>
+        </ul>
+    </div>
+</section>
+<!-- Summary Card -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div
+        class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl p-10 shadow-xl content-card md:col-span-2">
+        <h3 class="card-heading">In Summary</h3>
+
+        <p class="text-lg leading-relaxed text-center font-semibold" style="font-size: 18px;">Teams or individuals
+            register for the conference, pay any necessary fees, and receive their assigned countries and committees,
+            starting them on the path to active MUN participation.</p>
+    </div>
+</section>
+<!-- Activity Section -->
+
+<section class="max-w-5xl mx-auto px-8 py-16">
+    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card text-center">
+        <h3 class="text-3xl font-bold text-coral mb-8">Interactive Activity</h3>
+
+        <p class="text-lg mb-8" style="font-size: 18px;">Practice your MUN skills with this engaging activity!</p>
+        <!-- Embedded Activity -->
+
+        <div class="w-full" style="
+                height: 800px; 
+                border-radius: 1rem; 
+                overflow: hidden; 
+                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            "><iframe allowfullscreen="" class="w-full h-full border-0"
+                src="https://chirayumishra24.github.io/MUN/activity2.1.html" title="MUN Activity 2.1"></iframe></div>
+
+        <p class="text-lg mt-8 text-gray-600" style="font-size: 18px;">Complete the activity above to deepen your
+            understanding of Model UN!</p>
+    </div>
+</section>
+<!-- Footer -->
+
+<footer class="bg-mint/30 py-8 text-center text-gray-700 text-lg">
+    <p>Model United Nations Course</p>
+</footer>
+<script>
+    // Progress Bar & Buttons
+    function updateProgress() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        document.getElementById('progress-fill').style.height = scrolled + '%';
+        if (winScroll > 300) {
+            document.getElementById('back-to-top').classList.remove('hidden');
+        } else {
+            document.getElementById('back-to-top').classList.add('hidden');
+        }
+    }
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    // Fullscreen Toggle
+    document.getElementById('fullscreen-btn').addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    });
+
+    // Back to Top
+    document.getElementById('back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
