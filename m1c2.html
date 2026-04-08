@@ -1,408 +1,470 @@
-<div>
-    <div>
-        <div>
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <meta charset="UTF-8">
-                                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<title></title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="responsive.css">
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    cream: '#F8F5F0',
-                    mint: '#A7F3D0',
-                    powder: '#BFDBFE',
-                    coral: '#FFB4A2',
-                },
-                borderRadius: {
-                    'xl': '1.75rem',
-                },
-                keyframes: {
-                    float: {
-                        '0%, 100%': { transform: 'translateY(0)' },
-                        '50%': { transform: 'translateY(-10px)' },
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Why Participate?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="responsive.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#F8F5F0',
+                        mint: '#A7F3D0',
+                        powder: '#BFDBFE',
+                        coral: '#FFB4A2',
                     },
-                    pulseSoft: {
-                        '0%, 100%': { opacity: '0.6' },
-                        '50%': { opacity: '0.9' },
+                    borderRadius: {
+                        'xl': '1.75rem',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        pulseSoft: {
+                            '0%, 100%': { opacity: '0.6' },
+                            '50%': { opacity: '0.9' },
+                        }
+                    },
+                    animation: {
+                        float: 'float 6s ease-in-out infinite',
+                        pulseSoft: 'pulseSoft 4s ease-in-out infinite',
                     }
                 },
-                animation: {
-                    float: 'float 6s ease-in-out infinite',
-                    pulseSoft: 'pulseSoft 4s ease-in-out infinite',
-                }
             },
-        },
-    }
-</script>
-<style type="text/css">
-    @media (prefers-reduced-motion: reduce) {
-
-        .bg-gif,
-        * {
-            animation: none !important;
         }
-    }
+    </script>
+    <style type="text/css">
+        @media (prefers-reduced-motion: reduce) {
 
-    .content-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+            .bg-gif,
+            * {
+                animation: none !important;
+            }
+        }
 
-    .content-card:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 20px 40px rgba(255, 180, 162, 0.3);
-    }
+        .content-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .card-heading {
-        font-size: 1.875rem;
-        /* 30px */
-        font-weight: bold;
-        color: #FFB4A2;
-        /* coral */
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-</style>
-<!-- Animated GIF Background with Overlay -->
-<div class="fixed inset-0 -z-10 overflow-hidden">
-    <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
-        style="background-image: url('https://login.skillizee.io/s/articles/6960cccde0ac3864df019da9/images/1gif.gif');">&nbsp;</div>
+        .content-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(255, 180, 162, 0.3);
+        }
 
-    <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm">&nbsp;</div>
-</div>
-<!-- Slim Vertical Progress Bar -->
+        .card-heading {
+            font-size: 1.875rem;
+            /* 30px */
+            font-weight: bold;
+            color: #FFB4A2;
+            /* coral */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
 
-<div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
-    <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
-        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
-            id="progress-fill" style="height: 0%;">&nbsp;</div>
+<body class="bg-cream text-gray-800">
+
+    <!-- Animated GIF Background with Overlay -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-gif bg-cover bg-center bg-no-repeat opacity-50 animate-pulseSoft"
+            style="background-image: url('https://media.giphy.com/media/26ufnwz3wDUli7GU0/giphy.gif');"></div>
+        <div class="absolute inset-0 bg-cream/80 backdrop-blur-sm"></div>
     </div>
-</div>
-<!-- Fullscreen Button - Top Right -->
 
-<p><button aria-label="Toggle Fullscreen"
+    <!-- Slim Vertical Progress Bar -->
+    <div class="fixed right-3 top-1/2 -translate-y-1/2 h-1/3 w-3 flex items-center z-40 pointer-events-none">
+        <div class="w-full h-full relative rounded-full overflow-hidden bg-powder/30">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-mint to-powder opacity-90 rounded-full transition-all duration-500 ease-out"
+                id="progress-fill" style="height: 0%;"></div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Button - Top Right -->
+    <button
         class="fixed top-8 right-8 bg-powder/80 backdrop-blur-sm text-gray-900 p-5 rounded-full shadow-lg z-50 hover:bg-powder hover:scale-110 transition-all duration-300"
-        id="fullscreen-btn"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+        id="fullscreen-btn" aria-label="Toggle Fullscreen">
+        <svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 9V3h6"></path>
             <path d="M3 15v6h6"></path>
             <path d="M21 9V3h-6"></path>
             <path d="M21 15v6h-6"></path>
-        </svg></button><!-- Back to Top Button - Bottom Right --><button aria-label="Back to Top"
+        </svg>
+    </button>
+
+    <!-- Back to Top Button - Bottom Right -->
+    <button
         class="fixed bottom-8 right-8 bg-coral/80 backdrop-blur-sm text-white p-5 rounded-full shadow-lg z-50 hover:bg-coral hover:scale-110 transition-all duration-300 hidden"
-        id="back-to-top"><svg fill="none" height="28" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+        id="back-to-top" aria-label="Back to Top">
+        <svg fill="none" height="28" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+            stroke-width="2" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 19V5"></path>
             <path d="M5 12l7-7 7 7"></path>
-        </svg></button><!-- Header --></p>
+        </svg>
+    </button>
 
-<header class="relative py-32 px-8 overflow-hidden">
-    <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg">&nbsp;</div>
+    <!-- Header -->
+    <header class="relative py-32 px-8 overflow-hidden">
+        <div class="absolute inset-x-0 top-0 h-full bg-mint/50 rounded-b-3xl shadow-lg"></div>
+        <div class="relative max-w-5xl mx-auto text-center animate-float">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
+                style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">
+                Chapter 2<br />
+                <span class="text-coral block mt-4" style="color: #FF6B6B;">Why Participate?</span>
+            </h1>
+        </div>
+    </header>
 
-    <div class="relative max-w-5xl mx-auto text-center animate-float">
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight"
-            style="font-size: 48px; text-shadow: 0 4px 20px rgba(0,0,0,0.3); color: #333;">Chapter 1.1<br />
-            <span class="text-coral block mt-4" style="color: #FF6B6B;">What is MUN?</span>
-        </h1>
-    </div>
-</header>
-<!-- Notes Button (Bottom Left) -->
+    <!-- Embedded Video -->
+    <section class="max-w-5xl mx-auto px-8 py-12">
+        <div
+            class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <div class="aspect-video">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/nRCo4c9Fbjk?start=0&end=100"
+                    title="The BIG WHY YOU Should Participate in Model United Nations" frameborder="0"
+                    allowfullscreen></iframe>
+            </div>
+            <div class="p-6 text-center">
+                <p class="text-2xl font-bold text-coral">The BIG WHY YOU Should Participate in Model United Nations</p>
+                <p class="text-lg mt-2" style="font-size: 18px;">(Start to 1:40)</p>
+            </div>
+        </div>
+    </section>
 
-<p><button
-        class="fixed bottom-6 left-8 z-50 w-16 h-16 rounded-full bg-amber-400 border-4 border-white shadow-2xl flex items-center justify-center hover:scale-110 transition-all duration-300 backdrop-blur-md"
-        id="notes-btn"><img alt="Notes" class="w-8 h-8"
-            src="https://login.skillizee.io/s/articles/6971c474348e12598d489e16/images/notes.png" /></button><!-- Notes Panel --></p>
+    <!-- Hero Image -->
+    <section class="max-w-5xl mx-auto px-8 py-16">
+        <div class="rounded-xl overflow-hidden shadow-xl content-card">
+            <img src="https://login.skillizee.io/s/articles/695f5881e1c6f7470a7b5613/images/image-20260108124122-1.png"
+                alt="Students participating in Model UN" class="w-full h-96 object-cover brightness-90" />
+        </div>
+    </section>
 
-<div class="fixed bottom-28 left-8 z-50 w-80 max-w-[90vw] bg-white/80 backdrop-blur-xl border border-mint/50 rounded-2xl shadow-2xl p-4 hidden"
-    id="notes-panel">
-    <h3 class="text-lg font-bold text-coral mb-3 text-center">My Notes</h3>
-    <textarea
-        class="w-full rounded-xl p-3 text-sm border border-powder/60 focus:outline-none focus:ring-2 focus:ring-coral/40 bg-white/90 resize-none"
-        id="notes-text" placeholder="Write your notes here..." rows="6"></textarea>
+    <!-- Content Cards -->
+    <section class="max-w-5xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
 
-    <div class="flex justify-between items-center mt-4 gap-2"><button
-            class="flex-1 bg-red-100 text-red-600 text-sm font-semibold py-2 rounded-xl hover:bg-red-200 transition"
-            id="clear-notes">Clear</button><button
-            class="flex-1 bg-mint/40 text-gray-800 text-sm font-semibold py-2 rounded-xl hover:bg-mint/60 transition"
-            id="download-notes">Download</button></div>
-</div>
-<script>
-    const notesBtn = document.getElementById("notes-btn");
-    const notesPanel = document.getElementById("notes-panel");
-    const notesText = document.getElementById("notes-text");
-    const clearBtn = document.getElementById("clear-notes");
-    const downloadBtn = document.getElementById("download-notes");
+        <!-- Card 1: Key Skill Development -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card md:col-span-2">
+            <div class="p-8">
+                <h3 class="card-heading">Key Skill Development</h3>
+                <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                    <li>• MUN enhances skills such as public speaking, negotiation, critical thinking, research, and
+                        diplomacy, which are vital for academic success and are directly transferable to future
+                        professional settings.</li>
+                    <li>• Delegates also develop confidence, leadership abilities, and teamwork as they present ideas,
+                        collaborate in groups, and learn to persuade and compromise with others.</li>
+                </ul>
+            </div>
+        </div>
 
-    // Load saved notes
-    notesText.value = localStorage.getItem("mun_notes") || "";
+        <!-- Card 2: World Awareness and Learning -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <img src="https://images.unsplash.com/photo-1582213782179-04d3a7c108a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200"
+                alt="Global awareness in MUN" class="w-full h-64 object-cover brightness-90" />
+            <div class="p-8">
+                <h3 class="card-heading">World Awareness and Learning</h3>
+                <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                    <li>• Participants research global issues, represent their assigned countries’ interests, and learn
+                        to analyze situations from multiple viewpoints, significantly increasing their understanding and
+                        awareness of international relations, geopolitics, and world affairs.</li>
+                    <li>• The practical simulation provides hands-on insight into the complexities of diplomacy,
+                        international negotiations, and policymaking.</li>
+                </ul>
+            </div>
+        </div>
 
-    // Toggle panel
-    notesBtn.addEventListener("click", () => {
-        notesPanel.classList.toggle("hidden");
-    });
+        <!-- Card 3: Personal Growth and Networking -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl overflow-hidden shadow-xl content-card">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Networking in MUN" class="w-full h-64 object-cover brightness-90" />
+            <div class="p-8">
+                <h3 class="card-heading">Personal Growth and Networking</h3>
+                <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                    <li>• MUN offers the opportunity to meet new people from varied backgrounds, build connections, and
+                        engage in networking that can lead to lifelong friendships and important future collaborations.
+                    </li>
+                    <li>• The experience also nurtures personal growth, helping students to become more open-minded,
+                        adaptable, and socially conscious global citizens.</li>
+                </ul>
+            </div>
+        </div>
 
-    // Save notes automatically
-    notesText.addEventListener("input", () => {
-        localStorage.setItem("mun_notes", notesText.value);
-    });
+        <!-- Card 4: Leadership and Career Preparation -->
+        <div
+            class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card md:col-span-2">
+            <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg" alt="Leadership in MUN"
+                class="w-full h-64 object-cover brightness-90" />
+            <div class="p-8">
+                <h3 class="card-heading">Leadership and Career Preparation</h3>
+                <ul class="space-y-4 text-lg" style="font-size: 18px;">
+                    <li>• Exposure to leadership roles, such as organizing events or chairing committees, prepares
+                        students for further leadership opportunities, both inside and outside academic environments.
+                    </li>
+                    <li>• MUN participation is recognized as a valuable extracurricular activity for college admissions
+                        and future careers, as it signals strong analytical, communication, and organizational skills.
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    // Clear notes
-    clearBtn.addEventListener("click", () => {
-        if (confirm("Clear all notes?")) {
-            notesText.value = "";
-            localStorage.removeItem("mun_notes");
+    </section>
+
+    <!-- Summary -->
+    <section class="max-w-5xl mx-auto px-8 py-16">
+        <div
+            class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card text-center">
+            <p class="text-xl leading-relaxed font-semibold" style="font-size: 18px;">
+                In short, MUN is much more than a simulation—it is a powerful platform for acquiring practical skills,
+                gaining global awareness, and growing into an effective communicator and leader.
+            </p>
+        </div>
+    </section>
+
+    <!-- Interactive Fill in the Blanks Activity -->
+    <section class="max-w-5xl mx-auto px-8 py-16">
+        <div class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl p-12 shadow-2xl content-card">
+            <h3 class="text-3xl font-bold text-coral text-center mb-10">Interactive Activity: Fill in the Blanks</h3>
+            <p class="text-center text-lg mb-12" style="font-size: 18px;">Test your understanding of why you should
+                participate in MUN! Choose the correct word for each blank.</p>
+
+            <form id="quiz-form" class="space-y-12">
+                <!-- Question 1 -->
+                <div class="quiz-item">
+                    <p class="text-lg font-semibold mb-4" style="font-size: 18px;">
+                        1. Model United Nations (MUN) helps students develop important life and leadership skills such
+                        as __________, diplomacy, research, and negotiation.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q1" value="public speaking"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(A) public speaking</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q1" value="painting"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(B) painting</span>
+                        </label>
+                    </div>
+                    <p class="feedback mt-3 text-mint font-bold hidden" data-correct="public speaking">Correct! 🎉</p>
+                    <p class="feedback mt-3 text-red-500 font-bold hidden" data-correct="public speaking">Incorrect. The
+                        answer is public speaking.</p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-item">
+                    <p class="text-lg font-semibold mb-4" style="font-size: 18px;">
+                        2. In MUN, students act as __________ and represent different countries to discuss and solve
+                        global challenges.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q2" value="diplomats"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(A) diplomats</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q2" value="referees"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(B) referees</span>
+                        </label>
+                    </div>
+                    <p class="feedback mt-3 text-mint font-bold hidden" data-correct="diplomats">Correct! 🎉</p>
+                    <p class="feedback mt-3 text-red-500 font-bold hidden" data-correct="diplomats">Incorrect. The
+                        answer is diplomats.</p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-item">
+                    <p class="text-lg font-semibold mb-4" style="font-size: 18px;">
+                        3. One key benefit of participating in MUN is learning to analyze issues from __________
+                        perspectives and understanding world affairs.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q3" value="multiple"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(A) multiple</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q3" value="identical"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(B) identical</span>
+                        </label>
+                    </div>
+                    <p class="feedback mt-3 text-mint font-bold hidden" data-correct="multiple">Correct! 🎉</p>
+                    <p class="feedback mt-3 text-red-500 font-bold hidden" data-correct="multiple">Incorrect. The answer
+                        is multiple.</p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-item">
+                    <p class="text-lg font-semibold mb-4" style="font-size: 18px;">
+                        4. MUN encourages respectful __________ and compromise as students try to find collaborative
+                        solutions to global problems.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q4" value="dialogue"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(A) dialogue</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q4" value="dancing"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(B) dancing</span>
+                        </label>
+                    </div>
+                    <p class="feedback mt-3 text-mint font-bold hidden" data-correct="dialogue">Correct! 🎉</p>
+                    <p class="feedback mt-3 text-red-500 font-bold hidden" data-correct="dialogue">Incorrect. The answer
+                        is dialogue.</p>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-item">
+                    <p class="text-lg font-semibold mb-4" style="font-size: 18px;">
+                        5. By participating in MUN, students gain confidence to express their ideas, listen actively,
+                        and develop strong __________ and persuasive abilities.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q5" value="communication"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(A) communication</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="q5" value="cooking"
+                                class="form-radio text-coral focus:ring-coral">
+                            <span style="font-size: 18px;">(B) cooking</span>
+                        </label>
+                    </div>
+                    <p class="feedback mt-3 text-mint font-bold hidden" data-correct="communication">Correct! 🎉</p>
+                    <p class="feedback mt-3 text-red-500 font-bold hidden" data-correct="communication">Incorrect. The
+                        answer is communication.</p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="text-center mt-12 space-x-6">
+                    <button type="button" id="check-answers"
+                        class="bg-coral text-white px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-coral/90 hover:scale-105 transition-all duration-300">
+                        Check My Answers
+                    </button>
+                    <button type="button" id="reset-quiz"
+                        class="bg-mint text-gray-900 px-10 py-4 rounded-full text-xl font-semibold shadow-lg hover:bg-mint/80 hover:scale-105 transition-all duration-300">
+                        Reset Quiz
+                    </button>
+                </div>
+
+                <!-- Score Display -->
+                <div id="score-display" class="text-center mt-8 text-2xl font-bold text-coral hidden">
+                    Your Score: <span id="score">0</span>/5
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mint/30 py-8 text-center text-gray-700 text-lg">
+        <p>Model United Nations Course</p>
+    </footer>
+
+    <script>
+        // Progress Bar & Buttons
+        function updateProgress() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+            document.getElementById('progress-fill').style.height = scrolled + '%';
+            if (winScroll > 300) {
+                document.getElementById('back-to-top').classList.remove('hidden');
+            } else {
+                document.getElementById('back-to-top').classList.add('hidden');
+            }
         }
-    });
+        window.addEventListener('scroll', updateProgress);
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
 
-    // Download notes
-    downloadBtn.addEventListener("click", () => {
-        const blob = new Blob([notesText.value], { type: "text/plain" });
-        const link = document.createElement("a");
-        link.href = URL.createObjectURL(blob);
-        link.download = "MUN_Notes.txt";
-        link.click();
-        URL.revokeObjectURL(link.href);
-    });
-</script>
+        // Fullscreen Toggle
+        document.getElementById('fullscreen-btn').addEventListener('click', () => {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
 
-<div class="audio-container">
-    <audio controls="" controlslist="nodownload" oncontextmenu="return false;">
-        <source src="https://pa2-cmd.github.io/MUN/mun1.1.mp3" type="audio/mp3" /> Your browser does not support the
-        audio element.
-    </audio>
-</div>
-<style type="text/css">
-    .audio-container {
-        position: relative;
-        background: url('https://login.skillizee.io/s/articles/6960cccde0ac3864df019da9/images/Model United nation.gif') center center no-repeat;
-        background-size: contain;
-        /* keeps the GIF's aspect ratio */
-        border-radius: 16px;
-        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-        margin: 1rem auto;
-        width: 90%;
-        max-width: 900px;
-        aspect-ratio: 1920 / 1080;
-        /* maintain original proportion */
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 1rem;
-        padding-bottom: 1rem;
-    }
+        // Back to Top
+        document.getElementById('back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
-    /* Modern styled audio */
-    .audio-container audio {
-        width: 100%;
-        border-radius: 12px;
-        border: 2px solid #2D2B7E;
-        background: #F5F5FF;
-        height: 50px;
-        padding: 4px;
-        box-shadow: 0 3px 10px rgba(45, 43, 126, 0.3);
-    }
+        // Quiz Check Answers
+        document.getElementById('check-answers').addEventListener('click', function () {
+            let score = 0;
+            const questions = document.querySelectorAll('.quiz-item');
 
-    /* Lavender-toned player controls */
-    audio::-webkit-media-controls-panel {
-        background-color: #E6E6FA;
-        border-radius: 12px;
-    }
+            questions.forEach(item => {
+                const radios = item.querySelectorAll('input[type="radio"]');
+                const feedbackCorrect = item.querySelectorAll('.feedback')[0];
+                const feedbackIncorrect = item.querySelectorAll('.feedback')[1];
+                const correctAnswer = feedbackCorrect.getAttribute('data-correct');
 
-    audio::-webkit-media-controls-play-button,
-    audio::-webkit-media-controls-timeline,
-    audio::-webkit-media-controls-current-time-display,
-    audio::-webkit-media-controls-time-remaining-display,
-    audio::-webkit-media-controls-volume-slider {
-        filter: hue-rotate(240deg) saturate(1.2);
-    }
-</style>
-<!-- Video Card Section (After Audio Chapter) -->
-<section class="max-w-5xl mx-auto px-8 py-16">
-    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <!-- Video -->
-        <div class="aspect-video w-full"><iframe allowfullscreen="" class="w-full h-full" frameborder="0" scrolling="no"
-                src="https://www.youtube.com/embed/PeVjNWnyF5Q?rel=0"
-                title="Introduction to Model United Nations"></iframe></div>
-        <!-- Card Text -->
+                let answered = false;
+                radios.forEach(radio => {
+                    if (radio.checked) {
+                        answered = true;
+                        if (radio.value === correctAnswer) {
+                            score++;
+                            feedbackCorrect.classList.remove('hidden');
+                            feedbackIncorrect.classList.add('hidden');
+                        } else {
+                            feedbackIncorrect.classList.remove('hidden');
+                            feedbackCorrect.classList.add('hidden');
+                        }
+                    }
+                });
 
-        <div class="p-8 text-center">
-            <h3 class="text-3xl font-bold text-coral mb-4">Understanding Model United Nations</h3>
+                if (!answered) {
+                    feedbackIncorrect.classList.remove('hidden');
+                    feedbackIncorrect.textContent = "Please select an answer!";
+                    feedbackCorrect.classList.add('hidden');
+                }
+            });
 
-            <p class="text-lg text-gray-700 leading-relaxed" style="font-size:18px;">Watch this short introduction to
-                understand how Model United Nations works, how delegates participate, and how diplomacy, debate, and
-                global cooperation come together.</p>
-        </div>
-    </div>
-</section>
-<!-- Objective Card -->
+            document.getElementById('score').textContent = score;
+            document.getElementById('score-display').classList.remove('hidden');
+            document.getElementById('score-display').scrollIntoView({ behavior: 'smooth' });
+        });
 
-<section class="max-w-5xl mx-auto px-8 py-16">
-    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card">
-        <p class="text-center text-lg md:text-xl leading-relaxed animate-float"><strong>Objective:</strong> Understand
-            the purpose, structure, and appeal of Model UN.</p>
-    </div>
-</section>
-<!-- Embedded Video -->
+        // Reset Quiz Button
+        document.getElementById('reset-quiz').addEventListener('click', function () {
+            // Clear all radio buttons
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
 
-<section class="max-w-5xl mx-auto px-8 py-12">
-    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <div class="aspect-video"><iframe allowfullscreen="" class="w-full h-full" frameborder="0" scrolling="no"
-                src="https://www.youtube.com/embed/ehGeAp7J4uE?rel=0" title="What is Model United Nations?"></iframe>
-        </div>
+            // Hide all feedback
+            document.querySelectorAll('.feedback').forEach(fb => {
+                fb.classList.add('hidden');
+            });
 
-        <div class="p-6 text-center">
-            <p class="text-2xl font-bold text-coral">What is Model United Nations?</p>
-        </div>
-    </div>
-</section>
-<!-- Multiple Content Cards - Limited to max-w-5xl -->
+            // Hide score
+            document.getElementById('score-display').classList.add('hidden');
 
-<section class="max-w-5xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-12"><!-- Card 1 -->
-    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <img alt="Dynamic platform for skills development" class="w-full h-64 object-cover brightness-90"
-            src="https://login.skillizee.io/s/articles/695f37c9eff51d537be855ee/images/image-20260108102146-1.png" />
-        <div class="p-8">
-            <h3 class="card-heading">A Dynamic Learning Platform</h3>
+            // Scroll to top of quiz
+            document.querySelector('#quiz-form').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
 
-            <p class="text-lg leading-relaxed text-center font-semibold" style="font-size: 18px;">Model United Nations
-                (MUN) is a dynamic platform that helps students develop a wide range of essential life and leadership
-                skills. It goes far beyond debating &mdash; it&rsquo;s about learning how the real world works through
-                research, discussion, and teamwork.</p>
-        </div>
-    </div>
-    <!-- Card 2 -->
+</body>
 
-    <div class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <img alt="Stepping into diplomats' shoes" class="w-full h-64 object-cover brightness-90"
-            src="https://login.skillizee.io/s/articles/695f37c9eff51d537be855ee/images/Thet1.jpg" style="width: 603px; height: 413px;" />
-        <div class="p-8">
-            <h3 class="card-heading">Becoming Global Diplomats</h3>
-
-            <p class="text-lg leading-relaxed text-center" style="font-size: 18px;">In MUN, students step into the shoes
-                of diplomats and represent different countries to discuss and solve global challenges such as climate
-                change, poverty, or international security. Through this experience, they learn the art of public
-                speaking, diplomacy, research, negotiation, and critical thinking.</p>
-        </div>
-    </div>
-    <!-- Card 3 -->
-
-    <div class="bg-white/70 backdrop-blur-md border border-coral/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <img alt="Multiple perspectives and collaboration" class="w-full h-64 object-cover brightness-90"
-            src="https://login.skillizee.io/s/articles/695f37c9eff51d537be855ee/images/You.jpg" style="width: 735px; height: 481px;" />
-        <div class="p-8">
-            <h3 class="card-heading">Thinking Globally</h3>
-
-            <p class="text-lg leading-relaxed text-center" style="font-size: 18px;">It encourages participants to think
-                from multiple perspectives, understand the complexity of world affairs, and find collaborative solutions
-                through respectful dialogue and compromise.</p>
-        </div>
-    </div>
-    <!-- Card 4 -->
-
-    <div class="bg-white/70 backdrop-blur-md border border-mint/50 rounded-xl overflow-hidden shadow-xl content-card">
-        <img alt="Diverse collaboration" class="w-full h-64 object-cover brightness-90"
-            src="https://bestdelegate.com/wp-content/uploads/2021/11/MUN-Conference-scaled.jpeg" />
-        <div class="p-8">
-            <h3 class="card-heading">Building Confidence &amp; Leadership</h3>
-
-            <p class="text-lg leading-relaxed text-center" style="font-size: 18px;">By working with diverse delegates
-                from different schools or countries, students improve their communication, leadership, and persuasive
-                abilities. They gain confidence to express their opinions clearly, listen actively, and make
-                well-reasoned arguments.</p>
-        </div>
-    </div>
-    <!-- Card 5 (Full width within max-w-5xl) -->
-
-    <div
-        class="bg-white/70 backdrop-blur-md border border-powder/50 rounded-xl overflow-hidden shadow-xl content-card md:col-span-2">
-        <img alt="Emerging as global citizens" class="w-full h-64 object-cover brightness-90"
-            src="https://login.skillizee.io/s/articles/695f37c9eff51d537be855ee/images/image-20260108102146-2.png" />
-        <div class="p-8">
-            <h3 class="card-heading">Path to Personal Growth</h3>
-
-            <p class="text-lg leading-relaxed text-center font-semibold" style="font-size: 18px;">Ultimately, MUN is
-                more than an academic exercise &mdash; it&rsquo;s an opportunity for personal growth. It challenges
-                students to step out of their comfort zone, engage meaningfully with global issues, and emerge as
-                responsible, informed, and empathetic global citizens ready to lead the future.</p>
-        </div>
-    </div>
-</section>
-<!-- Activity Section -->
-
-<section class="max-w-5xl mx-auto px-8 py-16">
-    <div class="bg-white/70 backdrop-blur-md border border-white/50 rounded-xl p-10 shadow-xl content-card text-center">
-        <h3 class="text-3xl font-bold text-coral mb-8">Interactive Activity</h3>
-
-        <p class="text-lg mb-8" style="font-size: 18px;">Explore global cooperation through this fun diplomacy activity!
-        </p>
-        <!-- Embedded Activity -->
-
-        <div class="w-full"
-            style="height: 800px; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-            <iframe allowfullscreen="" class="w-full h-full border-0"
-                src="https://chirayumishra24.github.io/MUN/activity1.1.html"
-                title="MUN Activity 1.1: Exploring Global Cooperation Through Diplomacy"></iframe></div>
-
-        <p class="text-lg mt-8 text-gray-600" style="font-size: 18px;">Complete the activity above to deepen your
-            understanding of Model UN!</p>
-    </div>
-</section>
-<!-- Footer -->
-
-<footer class="bg-mint/30 py-8 text-center text-gray-700 text-lg">
-    <p>Model United Nations Course</p>
-</footer>
-<script>
-    // Progress Bar
-    function updateProgress() {
-        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
-        document.getElementById('progress-fill').style.height = scrolled + '%';
-
-        // Show/hide back to top button
-        if (winScroll > 300) {
-            document.getElementById('back-to-top').classList.remove('hidden');
-        } else {
-            document.getElementById('back-to-top').classList.add('hidden');
-        }
-    }
-    window.addEventListener('scroll', updateProgress);
-    window.addEventListener('resize', updateProgress);
-    updateProgress();
-
-    // Fullscreen Toggle
-    document.getElementById('fullscreen-btn').addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
-    });
-
-    // Back to Top
-    document.getElementById('back-to-top').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+</html>
